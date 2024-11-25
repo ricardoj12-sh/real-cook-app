@@ -1,0 +1,43 @@
+/* Estilo general del header */
+.header {
+  padding: 2rem 1rem 1.3rem;
+  background-color: #2c3e50; /* Fondo elegante oscuro */
+  text-align: center; /* Centra el contenido dentro del header */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+}
+
+/* Contenedor del logo */
+.header__navigation {
+  display: inline-block; /* Centra el logo sin ocupar todo el ancho */
+}
+
+/* Enlace del logo */
+.header__logo-link {
+  text-decoration: none; /* Elimina subrayado */
+  display: inline-block; /* Hace que el efecto hover sea interactivo */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+/* Logo */
+.header__logo {
+  height: auto;
+  max-width: 150px; /* Mantiene un tamaño razonable */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Sombra ligera */
+}
+
+/* Efecto hover */
+.header__logo-link:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  opacity: 0.9; /* Suaviza la transparencia */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .header__logo {
+    max-width: 120px; /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+
+  .header {
+    padding: 1.5rem 1rem; /* Ajusta el padding en dispositivos pequeños */
+  }
+}

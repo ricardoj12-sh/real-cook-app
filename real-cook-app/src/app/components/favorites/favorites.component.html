@@ -1,0 +1,28 @@
+<section class="recipe container">
+  <div class="recipe__list">
+    <ng-container *ngFor="let favorite of favorites; trackBy: trackByFavoriteId">
+      <app-card-recipe
+        [meal]="favorite"
+        (click)="loadRecipeDetails(favorite.idMeal || '')"
+      ></app-card-recipe>
+    </ng-container>
+    <h2 *ngIf="favorites.length === 0" class="msgerror">
+      No tienes recetas favoritas aún.
+    </h2>
+  </div>
+
+  <!-- Contenedor de detalles de la receta seleccionada -->
+  <div *ngIf="selectedRecipe" class="recipe__details-container">
+    <app-recipe
+      [recipeId]="selectedRecipe.idMeal || null"
+      [isFavoriteView]="true"
+    ></app-recipe>
+  </div>
+
+  <!-- Contenedor de paginación -->
+  <div class="pagination-container" *ngIf="totalPages > 1">
+    <button [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">Anterior</button>
+    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <button [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">Siguiente</button>
+  </div>
+</section>

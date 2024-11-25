@@ -1,0 +1,103 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Ajustes para los labels y los inputs */
+label {
+  font-size: 0.9rem;
+  color: #333;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(128, 189, 255, 0.5);
+}
+
+/* Botones para agregar ingredientes y agregar receta */
+.btn__add-ingredient,
+.btn__add-recipe {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn__add-ingredient:hover,
+.btn__add-recipe:hover {
+  background-color: #0056b3;
+}
+
+.btn__add-recipe {
+  margin-top: 1rem;
+}
+
+/* Ajustes para los ingredientes adicionales */
+.ingredient-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.ingredient-container label {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    max-width: 400px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .btn__add-ingredient,
+  .btn__add-recipe {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

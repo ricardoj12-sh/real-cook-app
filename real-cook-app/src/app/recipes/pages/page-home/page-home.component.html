@@ -1,0 +1,25 @@
+<app-header></app-header> 
+<main class="main container">
+  <h1 class="app-title">Recetas online</h1>
+
+  <!-- Sección de búsqueda y filtrado -->
+  <header class="main__header"> 
+    <div class="container__search">
+      <select name="" id="" class="input__categories" (input)="searchRecipeByCategory($event)">
+        <option value="">Todas las categorias</option>
+        <option *ngFor="let category of categories" [value]="category?.strCategory">
+          {{ category?.strCategory }}
+        </option>
+      </select>
+      <input type="search" placeholder="Buscar por nombres" class="input__search" (input)="searchRecipe($event)">
+      <button class="btn__search">
+        <img src="./assets/img/li_search.svg" alt="buscar">
+      </button>
+    </div>
+  </header>
+
+  <!-- Lista de recetas -->
+  <app-list-recipes></app-list-recipes>
+
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,16 @@
+<nz-tabset>
+  <!-- Pestaña para el contenido general -->
+  <nz-tab nzTitle="Pagina principal">
+    <router-outlet></router-outlet> <!-- Esto carga el contenido general -->
+  </nz-tab>
+
+  <!-- Pestaña para Agregar Receta -->
+  <nz-tab nzTitle="Agregar Receta">
+    <app-form-recipe></app-form-recipe> <!-- Carga el formulario de agregar receta aquí -->
+  </nz-tab>
+
+  <!-- Pestaña para Favoritos -->
+  <nz-tab nzTitle="Favoritos">
+    <app-favorites></app-favorites> <!-- Carga los favoritos aquí -->
+  </nz-tab>
+</nz-tabset>

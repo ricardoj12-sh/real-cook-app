@@ -1,0 +1,41 @@
+<form #recipeForm="ngForm" (ngSubmit)="onSubmit(recipeForm)">
+  <h2>Agregar Receta</h2>
+
+  <label for="strMeal">Nombre de la receta:</label>
+  <input type="text" id="strMeal" name="strMeal" ngModel required>
+
+  <label for="strCategory">Categoría:</label>
+  <select id="strCategory" name="strCategory" ngModel required>
+    <option value="">Selecciona una categoría</option>
+    <option value="Beef">Beef</option>
+    <option value="Chicken">Chicken</option>
+    <option value="Dessert">Dessert</option>
+    <option value="Pasta">Pasta</option>
+    <option value="Seafood">Seafood</option>
+    <option value="Vegetarian">Vegetarian</option>
+    <option value="Breakfast">Breakfast</option>
+    <option value="Salad">Salad</option>
+    <option value="Side Dish">Side Dish</option>
+    <option value="Snack">Snack</option>
+  </select>
+
+  <label for="strInstructions">Instrucciones:</label>
+  <textarea id="strInstructions" name="strInstructions" ngModel required></textarea>
+
+  <label for="strArea">Área:</label>
+  <input type="text" id="strArea" name="strArea" ngModel required placeholder="Ejemplo: RD">
+
+  <label for="strMealThumb">URL de la Imagen:</label>
+  <input type="text" id="strMealThumb" name="strMealThumb" ngModel required placeholder="Ejemplo: url_de_la_imagen">
+
+  <div *ngFor="let ingredient of ingredients; let i = index">
+    <label for="strIngredient{{i}}">Ingrediente {{i + 1}}:</label>
+    <input type="text" id="strIngredient{{i}}" name="strIngredient{{i}}" [(ngModel)]="ingredient.name">
+    
+    <label for="strMeasure{{i}}">Medida {{i + 1}}:</label>
+    <input type="text" id="strMeasure{{i}}" name="strMeasure{{i}}" [(ngModel)]="ingredient.measure">
+  </div>
+
+  <button type="button" (click)="addIngredient()" class="btn__add-ingredient">+</button>
+  <button type="submit" class="btn__add-recipe">Agregar Receta</button>
+</form>

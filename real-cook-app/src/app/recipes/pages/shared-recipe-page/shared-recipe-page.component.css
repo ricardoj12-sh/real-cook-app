@@ -1,0 +1,103 @@
+/* Estilo general del componente */
+.shared-recipe {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título de la receta */
+.shared-recipe__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Contenedor principal para detalles de la receta */
+.shared-recipe__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Imagen de la receta */
+.shared-recipe__image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/* Información de la receta */
+.shared-recipe__info {
+  flex-grow: 1;
+  max-width: 600px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Instrucciones */
+.shared-recipe__instructions {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+/* Lista de ingredientes */
+.shared-recipe__ingredients {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: #333;
+}
+
+/* Estilo para ingredientes individuales */
+.shared-recipe__ingredient {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .shared-recipe__details {
+    flex-direction: column;
+  }
+
+  .shared-recipe__image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .shared-recipe__info {
+    text-align: center;
+    max-width: 100%;
+  }
+}
